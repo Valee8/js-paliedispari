@@ -5,11 +5,11 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let sceltaUtente = prompt("Scegli pari o dispari (p o d)");
-
 let minComputer = 1;
 
 let maxComputer = 5;
+
+let sceltaUtente = prompt("Scegli pari o dispari (p o d)");
 
 while (sceltaUtente != "p" && sceltaUtente != "d") {
     sceltaUtente = prompt("Scegli pari o dispari (p o d)");
