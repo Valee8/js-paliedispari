@@ -49,7 +49,7 @@ function pariODispari(somma, scelta) {
     console.log("Scelta ", scelta);
 
     if (somma % 2 === 0 && scelta === "p") {
-        console.log("Ha vinto l'utente");
+        console.log("Hai vinto");
     } 
     else if (somma % 2 != 0 && scelta === "d") {
         console.log("Hai perso");
