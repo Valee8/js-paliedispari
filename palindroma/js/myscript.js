@@ -5,18 +5,25 @@
 
 let parolaUtente = prompt("Inserisci una parola");
 
+let parolaPalindroma;
+
 console.log(parolaUtente);
 
-palindroma(parolaUtente);
+parolaPalindroma = palindromaFunction(parolaUtente, parolaPalindroma);
+
+if (parolaPalindroma) {
+    console.log("E' palindroma");
+}
+else {
+    console.log("Non è palindroma");
+}
 
 // Funzione per capire se la parola è palindroma
-function palindroma(parola) {
+function palindromaFunction(parola, palindroma) {
 
     let parolaDivisa = parola.split("");
 
     let parolaInvertita = parolaDivisa.reverse();
-
-    let palindroma;
 
     for (let i = 0; i < parola.length; i++) {
         if (parolaInvertita[i] === parola[i]) {
@@ -27,10 +34,5 @@ function palindroma(parola) {
         }
     }
 
-    if (palindroma) {
-        console.log("E' palindroma");
-    }
-    else {
-        console.log("Non è palindroma");
-    }
+    return palindroma;
 }
