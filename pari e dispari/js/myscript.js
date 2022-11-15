@@ -27,7 +27,7 @@ while (numeroUtente <= 0 || numeroUtente > 5) {
 
 console.log("Numero scelto dall'utente: ", numeroUtente);
 
-let numeroComputer = generaNumeroRandom(minComputer, maxComputer);
+const numeroComputer = generaNumeroRandom(minComputer, maxComputer);
 
 console.log("Numero generato dal computer: ", numeroComputer);
 
