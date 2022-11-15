@@ -48,10 +48,7 @@ function pariODispari(somma, scelta) {
 
     console.log("Scelta ", scelta);
 
-    if (somma % 2 === 0 && scelta === "p") {
-        console.log("Hai vinto");
-    } 
-    else if (somma % 2 != 0 && scelta === "d") {
+    if ((somma % 2 === 0 && scelta === "p") || (somma % 2 != 0 && scelta === "d")) {
         console.log("Hai vinto");
     }
     else {
