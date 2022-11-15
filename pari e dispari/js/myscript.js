@@ -7,6 +7,10 @@
 
 let sceltaUtente = prompt("Scegli pari o dispari (p o d)");
 
+let minComputer = 1;
+
+let maxComputer = 5;
+
 while (sceltaUtente != "p" && sceltaUtente != "d") {
     sceltaUtente = prompt("Scegli pari o dispari (p o d)");
 }
@@ -21,7 +25,7 @@ while (numeroUtente <= 0 || numeroUtente > 5) {
 
 console.log("Numero scelto dall'utente: ", numeroUtente);
 
-let numeroComputer = generaNumeroRandom();
+let numeroComputer = generaNumeroRandom(minComputer, maxComputer);
 
 console.log("Numero generato dal computer: ", numeroComputer);
 
@@ -33,8 +37,8 @@ pariODispari(sommaNumeri, sceltaUtente);
 
 
 // Funzione per generare numero random
-function generaNumeroRandom() {
-    const randomComputer = Math.floor(Math.random() * 5) + 1;
+function generaNumeroRandom(min, max) {
+    const randomComputer = Math.floor(Math.random() * max) + min;
 
     return randomComputer;
 }
