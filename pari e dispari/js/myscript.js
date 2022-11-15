@@ -52,7 +52,7 @@ function pariODispari(somma, scelta) {
         console.log("Hai vinto");
     } 
     else if (somma % 2 != 0 && scelta === "d") {
-        console.log("Hai perso");
+        console.log("Hai vinto");
     }
     else {
         console.log("Hai perso");
