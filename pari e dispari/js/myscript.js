@@ -9,6 +9,8 @@ let minComputer = 1;
 
 let maxComputer = 5;
 
+let risultatoGioco;
+
 let sceltaUtente = prompt("Scegli pari o dispari (p o d)");
 
 while (sceltaUtente != "p" && sceltaUtente != "d") {
@@ -33,7 +35,14 @@ const sommaNumeri = numeroComputer + numeroUtente;
 
 console.log("Somma dei numeri: ", sommaNumeri);
 
-pariODispari(sommaNumeri, sceltaUtente);
+risultatoGioco = pariODispari(sommaNumeri, sceltaUtente, risultatoGioco);
+
+if (risultatoGioco) {
+    console.log("Hai vinto");
+}
+else {
+    console.log("Hai perso");
+}
 
 
 // Funzione per generare numero random
@@ -44,14 +53,16 @@ function generaNumeroRandom(min, max) {
 }
 
 // Funzione per controllare se la somma è pari o dispari
-function pariODispari(somma, scelta) {
+function pariODispari(somma, scelta, risultato) {
 
     console.log("Scelta ", scelta);
 
     if ((somma % 2 === 0 && scelta === "p") || (somma % 2 != 0 && scelta === "d")) {
-        console.log("Hai vinto");
+       risultato = true;
     }
     else {
-        console.log("Hai perso");
+        risultato = false;
     }
+
+    return risultato;
 }
