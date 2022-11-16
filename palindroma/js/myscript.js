@@ -9,17 +9,10 @@ let parolaPalindroma;
 
 console.log(parolaUtente);
 
-parolaPalindroma = palindromaFunction(parolaUtente, parolaPalindroma);
-
-if (parolaPalindroma) {
-    console.log("E' palindroma");
-}
-else {
-    console.log("Non è palindroma");
-}
+parolaPalindroma = palindromaFunction(parolaUtente);
 
 // Funzione per capire se la parola è palindroma
-function palindromaFunction(parola, palindroma) {
+function palindromaFunction(parola) {
 
     let parolaDivisa = parola.split("");
 
@@ -28,11 +21,10 @@ function palindromaFunction(parola, palindroma) {
     let parolaUnita = parolaInvertita.join("");
 
     if (parolaUnita === parola) {
-        palindroma = true;
+        console.log("E' palindroma");
+
     }
     else {
-        palindroma = false;
+        console.log("Non è palindroma");
     }
-
-    return palindroma;
 }
