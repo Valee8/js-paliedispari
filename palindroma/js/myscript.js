@@ -25,13 +25,13 @@ function palindromaFunction(parola, palindroma) {
 
     let parolaInvertita = parolaDivisa.reverse();
 
-    for (let i = 0; i < parola.length; i++) {
-        if (parolaInvertita[i] === parola[i]) {
-            palindroma = true;
-        }
-        else {
-            palindroma = false;
-        }
+    let parolaUnita = parolaInvertita.join("");
+
+    if (parolaUnita === parola) {
+        palindroma = true;
+    }
+    else {
+        palindroma = false;
     }
 
     return palindroma;
