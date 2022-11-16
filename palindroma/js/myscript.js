@@ -5,11 +5,9 @@
 
 let parolaUtente = prompt("Inserisci una parola");
 
-let parolaPalindroma;
-
 console.log(parolaUtente);
 
-parolaPalindroma = palindromaFunction(parolaUtente);
+palindromaFunction(parolaUtente);
 
 // Funzione per capire se la parola è palindroma
 function palindromaFunction(parola) {
