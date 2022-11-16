@@ -5,11 +5,15 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-let minComputer = 1;
+const minComputer = 1;
 
-let maxComputer = 5;
+const maxComputer = 5;
 
 let risultatoGioco;
+
+let numeroComputer;
+
+let sommaNumeri;
 
 let sceltaUtente = prompt("Scegli pari o dispari (p o d)");
 
@@ -27,11 +31,11 @@ while (numeroUtente <= 0 || numeroUtente > 5) {
 
 console.log("Numero scelto dall'utente: ", numeroUtente);
 
-const numeroComputer = generaNumeroRandom(minComputer, maxComputer);
+numeroComputer = generaNumeroRandom(minComputer, maxComputer);
 
 console.log("Numero generato dal computer: ", numeroComputer);
 
-const sommaNumeri = numeroComputer + numeroUtente;
+sommaNumeri = numeroComputer + numeroUtente;
 
 console.log("Somma dei numeri: ", sommaNumeri);
 
@@ -47,9 +51,9 @@ else {
 
 // Funzione per generare numero random
 function generaNumeroRandom(min, max) {
-    const randomComputer = Math.floor(Math.random() * max) + min;
+    const numRandom = Math.floor(Math.random() * max) + min;
 
-    return randomComputer;
+    return numRandom;
 }
 
 // Funzione per controllare se la somma è pari o dispari
